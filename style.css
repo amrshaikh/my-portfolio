@@ -1,0 +1,1287 @@
+/* =================================================================
+   1. Globals & Resets
+   ================================================================= */
+
+/* Define Colors */
+:root {
+  --color-indigo: #4f46e5;
+  --color-indigo-dark: #4338ca;
+  --color-indigo-light: #eef2ff;
+  --color-indigo-text: #3730a3;
+  
+  --color-gray-900: #111827;
+  --color-gray-800: #1f2937;
+  --color-gray-700: #374151;
+  --color-gray-600: #4b5563;
+  --color-gray-500: #6b7280;
+  --color-gray-400: #9ca3af;
+  --color-gray-200: #e5e7eb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-50: #f9fafb;
+  
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  line-height: 1.6;
+}
+
+/* Base Elements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--color-gray-600);
+  margin-bottom: 1rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-indigo);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+a:hover {
+  color: var(--color-indigo-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1280px; /* 7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem; /* sm:px-6 */
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem; /* lg:px-8 */
+    padding-right: 2rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-indigo {
+  color: var(--color-indigo);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.hidden-item {
+  display: none !important;
+}
+
+/* =================================================================
+   2. Icons (Google Material + SVG)
+   ================================================================= */
+.icon-g {
+  /* Google Material Symbol */
+  font-size: 1.25rem; /* Default icon size */
+  vertical-align: -5px; /* Aligns icons with text */
+  font-variation-settings: 'wght' 400;
+}
+.btn .icon-g {
+  font-size: 1.1rem;
+  vertical-align: -2px;
+}
+.btn-primary-sm .icon-g, .btn-secondary-sm .icon-g {
+  font-size: 1rem;
+  vertical-align: -2px;
+}
+.skill-icon .icon-g {
+  font-size: 1.25rem;
+  vertical-align: 0;
+}
+.form-status .icon-g {
+  font-size: 1.25rem;
+  vertical-align: -4px;
+}
+.social-icon .icon-g {
+  font-size: 1.5rem;
+  vertical-align: 0;
+}
+.social-arrow.icon-g {
+  font-size: 1.25rem;
+  vertical-align: 0;
+  color: var(--color-gray-400);
+}
+.modal-close-btn .icon-g {
+  font-size: 1.5rem;
+  vertical-align: 0;
+}
+
+.icon-svg {
+  /* Inline SVG Brand Icon */
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: -5px;
+}
+.btn .icon-svg {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: -2px;
+}
+.skill-icon .icon-svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--color-indigo);
+  vertical-align: 0;
+}
+.social-icon .icon-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: 0;
+}
+.footer-socials .icon-svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: 0;
+}
+
+
+/* =================================================================
+   3. Header & Navigation
+   ================================================================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease-in-out;
+}
+.site-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem; /* h-20 */
+}
+
+.nav-logo {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 800;
+  color: var(--color-indigo);
+}
+.nav-logo:hover {
+  color: var(--color-indigo);
+}
+
+.desktop-nav {
+  display: none; /* hidden */
+  align-items: center;
+  gap: 0.5rem; /* space-x-2 */
+}
+@media (min-width: 768px) { /* md: */
+  .desktop-nav {
+    display: flex; /* md:flex */
+  }
+}
+
+.nav-link {
+  padding: 0.5rem 0.75rem; /* px-3 py-2 */
+  border-radius: 0.375rem; /* rounded-md */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+.nav-link:hover {
+  color: var(--color-indigo);
+}
+.nav-link.active {
+  color: var(--color-indigo);
+  font-weight: 600;
+}
+
+.mobile-menu-button {
+  display: inline-flex; /* md:hidden */
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  background: none;
+  color: var(--color-gray-600);
+  cursor: pointer;
+}
+.mobile-menu-button:hover {
+  color: var(--color-gray-900);
+  background-color: var(--color-gray-100);
+}
+.mobile-menu-button .icon-g {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  vertical-align: 0;
+}
+@media (min-width: 768px) {
+  .mobile-menu-button {
+    display: none; /* md:hidden */
+  }
+}
+
+.mobile-menu {
+  padding: 0.5rem 0.5rem 0.75rem;
+  border-top: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--color-white);
+}
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none; /* md:hidden */
+  }
+}
+
+.mobile-nav-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+.mobile-nav-link:hover {
+  color: var(--color-indigo);
+  background-color: var(--color-gray-100);
+}
+.mobile-nav-link.active {
+  color: var(--color-indigo);
+  background-color: var(--color-indigo-light);
+}
+
+/* =================================================================
+   4. Main Content & Pages
+   ================================================================= */
+.main-content {
+  padding-top: 5rem; /* pt-20 */
+}
+
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+}
+
+/* Standard page sections */
+.page-content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.page-content-narrow {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  max-width: 1024px; /* 4xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Home page sections */
+.hero-section {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+}
+.home-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.home-section-alt {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: var(--color-gray-50);
+  border-top: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.hero-title {
+  font-size: 3rem; /* 5xl */
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+.hero-subtitle {
+  font-size: 1.25rem; /* xl */
+  color: var(--color-gray-600);
+  max-width: 56rem; /* 3xl */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+}
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  font-size: 2.25rem; /* 4xl */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-subtitle {
+  font-size: 1.125rem; /* lg */
+  color: var(--color-gray-600);
+  text-align: center;
+  max-width: 42rem; /* 2xl */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0rem;
+}
+.section-subtitle .link {
+  font-weight: 500;
+  text-decoration: none;
+}
+.section-subtitle .link:hover {
+  text-decoration: underline;
+}
+
+.section-subtitle-alt {
+  font-size: 1.875rem; /* 3xl */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* =================================================================
+   5. Buttons & Tags
+   ================================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 9999px; /* rounded-full */
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: var(--color-indigo);
+  color: var(--color-white);
+}
+.btn-primary:hover {
+  background-color: var(--color-indigo-dark);
+  color: var(--color-white);
+}
+.btn-secondary {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-800);
+}
+.btn-secondary:hover {
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
+}
+.btn-light {
+  background-color: var(--color-white);
+  color: var(--color-indigo);
+}
+.btn-light:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-indigo);
+}
+.btn-full {
+  width: 100%;
+}
+
+.btn-primary-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background-color: var(--color-indigo);
+  color: var(--color-white);
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+}
+.btn-primary-sm:hover {
+  background-color: var(--color-indigo-dark);
+  color: var(--color-white);
+}
+.btn-secondary-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-800);
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+}
+.btn-secondary-sm:hover {
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
+}
+
+.tag {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-indigo-light);
+  color: var(--color-indigo-text);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.tag-alt {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--color-gray-200);
+}
+.tag-alt-more {
+  padding: 0.25rem 0.75rem;
+  color: var(--color-gray-500);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.btn-filter {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-white);
+  color: var(--color-gray-700);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-filter:hover {
+  background-color: var(--color-gray-100);
+}
+.btn-filter.active {
+  background-color: var(--color-indigo);
+  color: var(--color-white);
+  border-color: var(--color-indigo);
+}
+.btn-filter.active:hover {
+  background-color: var(--color-indigo-dark);
+}
+
+/* =================================================================
+   6. Bento Box & Grids
+   ================================================================= */
+.bento-box {
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 1.5rem; /* rounded-3xl */
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-gray-200);
+  transition: all 0.3s ease;
+}
+.bento-box:hover {
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-gray-200);
+  transform: translateY(-4px);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .content-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.design-grid {
+  display: grid;
+  /* Mobile-first: 1 column by default */
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* At 640px wide (tablets), switch to 2 columns */
+@media (min-width: 640px) {
+  .design-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* At 1024px wide (desktops), switch to 3 columns */
+@media (min-width: 1024px) {
+  .design-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 56rem; /* 4xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.skills-grid-full {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .skills-grid-full {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =================================================================
+   7. Component Styles
+   ================================================================= */
+
+/* Project Card */
+.project-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.project-card-img {
+  width: 100%;
+  height: 12rem; /* h-48 */
+  object-fit: cover;
+  object-position: top;
+}
+.project-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.project-card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.project-card-content p {
+  color: var(--color-gray-600);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.project-card-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Skill Card */
+.skill-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.skill-card-title h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: var(--color-indigo-light);
+  color: var(--color-indigo);
+  border-radius: 0.5rem;
+  width: 36px; /* Fixed size */
+  height: 36px;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--color-indigo);
+}
+.cta-section .container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.cta-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+.cta-subtitle {
+  font-size: 1.25rem;
+  color: #c7d2fe; /* indigo-100 */
+  margin-bottom: 2.5rem;
+}
+.cta-section .btn-light {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 640px) {
+  .cta-section .btn-light {
+    width: auto;
+  }
+}
+
+/* =================================================================
+   7. Component Styles (Design Page - UPDATED)
+   ================================================================= */
+
+/* ... (Your other component styles like .project-card are here) ... */
+
+/* Design Page */
+.filter-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+/* This is the new container that we hide/show */
+.design-grid-container {
+  display: none; /* Hidden by default */
+}
+.design-grid-container.active {
+  display: block; /* Shown when active */
+}
+
+
+/* This is the clickable item */
+.design-item {
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  /* We add this to make the aspect-ratio boxes work */
+  position: relative;
+  height: auto;
+}
+
+/* This sets the aspect ratios */
+.design-item-1x1  { aspect-ratio: 1 / 1; }
+.design-item-4x5  { aspect-ratio: 4 / 5; }
+.design-item-16x9 { aspect-ratio: 16 / 9; }
+
+.design-item img {
+  /* This makes the image fill its container perfectly */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.design-item:hover img {
+  transform: scale(1.05);
+}
+
+/* The .design-item-content is now HIDDEN
+  because the image fills the entire box.
+  The modal will show the title/description.
+*/
+.design-item-content {
+  display: none;
+}
+
+/* About Page */
+.about-section {
+  margin-bottom: 4rem;
+}
+.about-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.timeline {
+  position: relative;
+  border-left: 2px solid var(--color-indigo-light);
+  margin-left: 1rem;
+}
+.timeline-item {
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+}
+.timeline-dot {
+  position: absolute;
+  left: -9px; /* Adjust for dot size and border */
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-indigo);
+  border-radius: 50%;
+  border: 4px solid var(--color-white);
+}
+.timeline-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.timeline-subheading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-indigo);
+  margin-bottom: 0.25rem;
+}
+.timeline-content time {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+  margin-bottom: 0.75rem;
+}
+.timeline-content p {
+  font-size: 1rem;
+  color: var(--color-gray-600);
+}
+
+/* Contact Page */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact-form div {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+  margin-bottom: 0.25rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-gray-50);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: var(--color-indigo);
+  box-shadow: 0 0 0 2px var(--color-indigo-light);
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.form-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #059669; /* green-600 */
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.social-links h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.social-card:hover {
+  color: var(--color-gray-900);
+}
+.social-icon {
+  display: flex; /* Added for centering SVG */
+  align-items: center; /* Added for centering SVG */
+  justify-content: center; /* Added for centering SVG */
+  padding: 0.75rem;
+  background-color: var(--color-indigo-light);
+  color: var(--color-indigo);
+  border-radius: 0.5rem;
+  width: 48px; /* Fixed size */
+  height: 48px;
+}
+.social-card div {
+  flex-grow: 1;
+}
+.social-card p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.social-card span {
+  font-size: 0.875rem;
+  color: var(--color-indigo);
+}
+
+/* =================================================================
+   8. Footer
+   ================================================================= */
+.site-footer {
+  background-color: var(--color-gray-50);
+  border-top: 1px solid var(--color-gray-200);
+}
+.footer-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.footer-content p {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  margin: 0;
+}
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.footer-socials a {
+  color: var(--color-gray-500);
+}
+.footer-socials a:hover {
+  color: var(--color-indigo);
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    text-align: left;
+  }
+  .footer-socials {
+    margin-top: 0;
+  }
+}
+
+/* =================================================================
+   9. Modal
+   ================================================================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  padding: 1rem;
+}
+.modal-content {
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-xl);
+  max-width: 56rem; /* 4xl */
+  width: 100%;
+  overflow: hidden;
+}
+.modal-image-container {
+  position: relative;
+}
+.modal-content img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  background-color: var(--color-gray-100);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+  color: var(--color-gray-800);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex; /* To center icon */
+  align-items: center;
+  justify-content: center;
+}
+.modal-close-btn:hover {
+  background-color: var(--color-white);
+}
+
+
+/* =================================================================
+   10. Home Page Design Carousel
+   ================================================================= */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Use a mask to fade out the sides, looks more professional */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center; /* Vertically center slides */
+  /* We will set the 'transform' property via JavaScript */
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.carousel-slide {
+  /* Each slide takes up 1/3 of the viewport */
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 0 1rem; /* Spacing between slides */
+  
+  /* Side slides (default state) */
+  transform: scale(0.8);
+  opacity: 0.5;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), 
+              opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.carousel-slide.active {
+  /* Center "active" slide */
+  transform: scale(1);
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  aspect-ratio: 1 / 1;    /* <-- ADD THIS: */
+  object-fit: cover;    /* <-- ADD THIS: */
+  border-radius: 1.5rem; /* rounded-3xl */
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-gray-100);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  
+  /* Styling */
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: 9999px; /* rounded-full */
+  width: 3rem;  /* w-12 */
+  height: 3rem; /* h-12 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  color: var(--color-gray-800);
+  transition: all 0.2s ease-in-out;
+}
+.carousel-btn:hover {
+  background-color: var(--color-gray-100);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-50%) scale(1.05); /* Slightly lift on hover */
+}
+.carousel-btn.prev {
+  left: -0.5rem; /* Position left */
+}
+.carousel-btn.next {
+  right: -0.5rem; /* Position right */
+}
+.carousel-btn .icon-g {
+  font-size: 1.5rem;
+  vertical-align: 0;
+}
+
+/* On smaller screens, hide the side slides */
+@media (max-width: 768px) {
+  .carousel-viewport {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .carousel-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+    /* On mobile, all slides are full size, one at a time */
+    transform: scale(1);
+    opacity: 1;
+  }
+  .carousel-btn {
+    top: auto;
+    bottom: -3.5rem; /* Place buttons below the image */
+    transform: translateY(0);
+  }
+  .carousel-btn.prev {
+    left: 30%;
+  }
+  .carousel-btn.next {
+    right: 30%;
+  }
+}
+
+/* =================================================================
+   11. Home Page Skill App Grid (Iconify <img> Style)
+   ================================================================= */
+
+/* This is the grid container for the 8 apps */
+.skill-app-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first: 1 column list */
+  gap: 0.5rem; /* Smaller gap for list style */
+  max-width: 56rem; /* 4xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- MOBILE "CONTACT LIST" STYLES (Default) --- */
+
+.skill-app-item {
+  display: flex; 
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-gray-100);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.skill-app-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gray-200);
+}
+
+.skill-app-icon {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-indigo-light);
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  /* Add transition for the hover effect */
+  transition: transform 0.3s ease;
+}
+
+.skill-app-item:hover .skill-app-icon {
+  /* Add a "pop" effect on hover */
+  transform: scale(1.1);
+}
+
+.skill-app-icon img {
+  /* Targets the <img> tag */
+  width: 1.25rem; /* text-xl */
+  height: 1.25rem;
+}
+
+.skill-app-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: 0;
+}
+
+.skill-app-item p {
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+  margin-bottom: 0;
+}
+
+/* --- TABLET & DESKTOP "APP GRID" STYLES (Overrides) --- */
+
+@media (min-width: 640px) {
+  .skill-app-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .skill-app-item {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+  .skill-app-item:hover {
+    transform: translateY(-4px);
+  }
+  
+  .skill-app-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    margin: 0 auto 1rem;
+  }
+
+  .skill-app-icon img {
+    /* Targets the <img> tag */
+    width: 2rem; /* 32px */
+    height: 2rem;
+  }
+  
+  .skill-app-item h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .skill-app-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* =================================================================
+   12. "View All" Link Styles (Updated)
+   ================================================================= */
+.section-view-all {
+  /* Set top margin to 0 to be on the next line */
+  margin-top: 0rem; 
+  /* Add back the 3rem margin, but at the bottom */
+  margin-bottom: 3rem; 
+  text-align: center;
+}
+
+.link-arrow {
+  /* This styles the "View all..." link with an arrow */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem; /* 4px */
+  font-weight: 500;
+  color: var(--color-indigo);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.link-arrow:hover {
+  /* Removed the underline */
+  gap: 0.5rem; /* Makes the arrow move slightly on hover */
+}
+
+.link-arrow .icon-g {
+  font-size: 1.25rem; /* 20px */
+  transition: transform 0.2s ease;
+  vertical-align: 0;
+}
+
+.link-arrow:hover .icon-g {
+  transform: translateX(4px); /* Moves arrow on hover */
+}
