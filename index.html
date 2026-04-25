@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,17 @@
 
   <!-- 1. Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  
+
   <!-- 2. Google Material Symbols -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  
-  <!-- 3. Custom Font (Inter) -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- 3. Custom Font (Space Grotesk & Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- 4. Icon -->
   <link rel="icon" type="image/png" href="images/designs/icon.png">
@@ -30,7 +34,7 @@
         <a href="#home" data-page="home" class="nav-link nav-logo">
           Amr.
         </a>
-        
+
         <!-- Desktop Nav -->
         <div id="desktop-nav" class="desktop-nav">
           <a href="#home" data-page="home" class="nav-link active" aria-current="page">Home</a>
@@ -39,7 +43,7 @@
           <a href="#about" data-page="about" class="nav-link">About</a>
           <a href="#contact" data-page="contact" class="nav-link">Contact</a>
         </div>
-        
+
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-button" class="mobile-menu-button">
           <span class="sr-only">Open main menu</span>
@@ -67,16 +71,16 @@
       <!-- Hero -->
       <section class="hero-section">
         <div class="container text-center">
-          <h1 class="hero-title">
+          <h1 class="hero-title reveal">
             Hi There!<br>
             <span class="text-indigo">I'm Amr Shaikh.</span>
           </h1>
-          <p class="hero-subtitle">
+          <p class="hero-subtitle reveal delay-200">
             A Graphic Designer and Full-Stack Developer
             passionate about creating optimal and seamless
             user experiences from concept to code.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions reveal delay-400">
             <a href="#projects" data-page="projects" class="nav-link btn btn-primary" fetchpriority="high">
               <span class="material-symbols-outlined icon-g">work</span> View My Work
             </a>
@@ -90,10 +94,10 @@
       <!-- Featured Projects -->
       <section class="home-section-alt">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title reveal">
             Featured Projects
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle reveal delay-200">
             Here's a selection of my best work.
           </p>
           <p class="section-view-all">
@@ -103,52 +107,70 @@
             </a>
           </p>
           <div class="content-grid">
-            
-            <div class="project-card bento-box">
-              <img src="images/projects/brainy-blitz-screenshot.png" alt="A screenshot of the homepage for BrainyBlitz" class="project-card-img" loading="lazy">
+
+            <div class="project-card bento-box reveal">
+              <img src="images/projects/brainy-blitz-screenshot.png" alt="A screenshot of the homepage for BrainyBlitz"
+                class="project-card-img" loading="lazy">
               <div class="project-card-content">
                 <h3>BrainyBlitz</h3>
                 <p>a dynamic web-based quiz game.</p>
                 <div class="project-card-actions">
-                  <a href="https://amrshaikh.github.io/brainyblitz-quiz-app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-sm">
+                  <a href="https://amrshaikh.github.io/brainyblitz-quiz-app/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary-sm">
                     <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
                   </a>
-                  <a href="https://github.com/amrshaikh/brainyblitz-quiz-app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-sm">
-                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
+                  <a href="https://github.com/amrshaikh/brainyblitz-quiz-app" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary-sm">
+                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                    </svg>
                     GitHub
                   </a>
                 </div>
               </div>
             </div>
-            
-            <div class="project-card bento-box">
-              <img src="images/projects/planet-pulse-screenshot.png" alt="A screenshot of the homepage for PlanetPulse" class="project-card-img" loading="lazy">
+
+            <div class="project-card bento-box reveal">
+              <img src="images/projects/planet-pulse-screenshot.png" alt="A screenshot of the homepage for PlanetPulse"
+                class="project-card-img" loading="lazy">
               <div class="project-card-content">
                 <h3>PlanetPulse</h3>
                 <p>An AI-powered sustainability dashboard.</p>
                 <div class="project-card-actions">
-                  <a href="https://theplanetpulse.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-sm">
+                  <a href="https://theplanetpulse.netlify.app/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary-sm">
                     <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
                   </a>
-                  <a href="https://github.com/amrshaikh/planet-pulse" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-sm">
-                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
+                  <a href="https://github.com/amrshaikh/planet-pulse" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary-sm">
+                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                    </svg>
                     GitHub
                   </a>
                 </div>
               </div>
             </div>
-            
-            <div class="project-card bento-box">
-              <img src="images/projects/cuisine-quest-screenshot.png" alt="A screenshot of the homepage for Cuisine Quest" class="project-card-img" loading="lazy">
+
+            <div class="project-card bento-box reveal">
+              <img src="images/projects/cuisine-quest-screenshot.png"
+                alt="A screenshot of the homepage for Cuisine Quest" class="project-card-img" loading="lazy">
               <div class="project-card-content">
                 <h3>Cuisine Quest</h3>
                 <p>An interactive recipe recommendation app.</p>
                 <div class="project-card-actions">
-                  <a href="https://amrshaikh.github.io/cuisine-quest/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-sm">
+                  <a href="https://amrshaikh.github.io/cuisine-quest/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary-sm">
                     <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
                   </a>
-                  <a href="https://github.com/amrshaikh/cuisine-quest" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-sm">
-                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
+                  <a href="https://github.com/amrshaikh/cuisine-quest" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary-sm">
+                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                    </svg>
                     GitHub
                   </a>
                 </div>
@@ -159,13 +181,13 @@
       </section>
 
 
-  <!-- Featured Designs section -->
+      <!-- Featured Designs section -->
       <section class="home-section">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title reveal">
             Featured Designs
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle reveal delay-200">
             A gallery of my recent design work.
           </p>
           <p class="section-view-all">
@@ -215,16 +237,16 @@
 
         </div>
       </section>
-  <!-- end Featured Designs -->
+      <!-- end Featured Designs -->
 
 
       <!-- Core Skills -->
       <section class="home-section-alt">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title reveal">
             Core Skills
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle reveal delay-200">
             The tools I use to build efficient and user-friendly applications.
           </p>
           <p class="section-view-all">
@@ -236,7 +258,7 @@
 
           <!-- Skills grid -->
           <div class="skill-app-grid">
-            <div class="skill-app-item">
+            <div class="skill-app-item reveal">
               <span class="skill-app-icon">
                 <img src="https://api.iconify.design/devicon/figma.svg" alt="Figma logo" loading="lazy">
               </span>
@@ -244,7 +266,7 @@
               <p>UI/UX Design</p>
             </div>
 
-            <div class="skill-app-item">
+            <div class="skill-app-item reveal">
               <span class="skill-app-icon">
                 <img src="https://api.iconify.design/devicon/photoshop.svg" alt="Photoshop logo" loading="lazy">
               </span>
@@ -252,7 +274,7 @@
               <p>Graphics Editing</p>
             </div>
 
-            <div class="skill-app-item">
+            <div class="skill-app-item reveal">
               <span class="skill-app-icon">
                 <img src="https://api.iconify.design/devicon/canva.svg" alt="Canva logo" loading="lazy">
               </span>
@@ -260,7 +282,7 @@
               <p>Visuals & Media</p>
             </div>
 
-            <div class="skill-app-item">
+            <div class="skill-app-item reveal">
               <span class="skill-app-icon">
                 <img src="https://api.iconify.design/devicon/javascript.svg" alt="JavaScript logo" loading="lazy">
               </span>
@@ -268,7 +290,7 @@
               <p>Language</p>
             </div>
 
-            <div class="skill-app-item">
+            <div class="skill-app-item reveal">
               <span class="skill-app-icon">
                 <img src="https://api.iconify.design/devicon/tailwindcss.svg" alt="Tailwind CSS logo" loading="lazy">
               </span>
@@ -276,15 +298,16 @@
               <p>Styling</p>
             </div>
 
-            <div class="skill-app-item">
+            <div class="skill-app-item reveal">
               <span class="skill-app-icon">
-                <img src="https://api.iconify.design/vscode-icons/file-type-gemini.svg" alt="Gemini logo" loading="lazy">
+                <img src="https://api.iconify.design/vscode-icons/file-type-gemini.svg" alt="Gemini logo"
+                  loading="lazy">
               </span>
               <h3>Generative AI</h3>
               <p>Specialty</p>
             </div>
 
-            <div class="skill-app-item">
+            <div class="skill-app-item reveal">
               <span class="skill-app-icon">
                 <img src="https://api.iconify.design/devicon/github.svg" alt="GitHub logo" loading="lazy">
               </span>
@@ -292,7 +315,7 @@
               <p>Version Control</p>
             </div>
 
-            <div class="skill-app-item">
+            <div class="skill-app-item reveal">
               <span class="skill-app-icon">
                 <img src="https://api.iconify.design/devicon/vscode.svg" alt="VS Code logo" loading="lazy">
               </span>
@@ -307,297 +330,331 @@
       <!-- Final CTA -->
       <section class="cta-section">
         <div class="container text-center">
-           <h2 class="cta-title">
-             Let's build something great.
-           </h2>
-           <p class="cta-subtitle">
-             Have a project in mind? I'm available for freelance work and
-             full-time opportunities.
-           </p>
-           <a href="#contact" data-page="contact" class="nav-link btn btn-light">
-             <span class="material-symbols-outlined icon-g">send</span> Get in Touch
-           </a>
+          <h2 class="cta-title">
+            Let's build something great.
+          </h2>
+          <p class="cta-subtitle">
+            Have a project in mind? I'm available for freelance work and
+            full-time opportunities.
+          </p>
+          <a href="#contact" data-page="contact" class="nav-link btn btn-light">
+            <span class="material-symbols-outlined icon-g">send</span> Get in Touch
+          </a>
         </div>
       </section>
     </section>
-    
+
     <!-- Section 2. Page: Projects -->
     <section id="projects" class="page">
       <div class="container page-content">
-        <h1 class="section-title">All Projects</h1>
+        <h1 class="section-title reveal">All Projects</h1>
         <div class="content-grid">
-          
-            <div class="project-card bento-box">
-              <img src="images/projects/brainy-blitz-screenshot.png" alt="BrainyBlitz homepage screenshot" class="project-card-img" loading="lazy">
-              <div class="project-card-content">
-                <h3>BrainyBlitz</h3>
-                <p>A web-based quiz game built with a dynamic question-fetching API.</p>
-                <div class="project-card-tags">
-                  <span class="tag">HTML5</span>
-                  <span class="tag">Tailwind CSS</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">OpenTDB</span>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://amrshaikh.github.io/brainyblitz-quiz-app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-sm">
-                    <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
-                  </a>
-                  <a href="https://github.com/amrshaikh/brainyblitz-quiz-app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-sm">
-                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          
-            <div class="project-card bento-box">
-              <img src="images/projects/planet-pulse-screenshot.png" alt="PlanetPulse homepage screenshot" class="project-card-img" loading="lazy">
-              <div class="project-card-content">
-                <h3>PlanetPulse</h3>
-                <p>An AI dashboard providing real-time city health checks.</p>
-                <div class="project-card-tags">
-                  <span class="tag">HTML5</span>
-                  <span class="tag">CSS3</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">Open-Meteo API</span>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://theplanetpulse.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-sm">
-                    <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
-                  </a>
-                  <a href="https://github.com/amrshaikh/planet-pulse" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-sm">
-                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          
-            <div class="project-card bento-box">
-              <img src="images/projects/cuisine-quest-screenshot.png" alt="Cuisine Quest homepage screenshot" class="project-card-img" loading="lazy">
-              <div class="project-card-content">
-                <h3>Cuisine Quest</h3>
-                <p>An interactive recipe platform designed for easy meal recommendation.</p>
-                <div class="project-card-tags">
-                  <span class="tag">HTML5</span>
-                  <span class="tag">CSS3</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">TheMealDB API</span>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://amrshaikh.github.io/cuisine-quest/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-sm">
-                    <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
-                  </a>
-                  <a href="https://github.com/amrshaikh/cuisine-quest" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-sm">
-                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          
-            <div class="project-card bento-box">
-              <img src="images/projects/phish-shield-screenshot.png" alt="PhishShield AI homepage screenshot" class="project-card-img" loading="lazy">
-              <div class="project-card-content">
-                <h3>PhishShield AI</h3>
-                <p>An AI-powered web application for analyzing emails.</p>
-                <div class="project-card-tags">
-                  <span class="tag">HTML5</span>
-                  <span class="tag">Tailwind CSS</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">Gemini API</span>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://thefirewallcrew.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-sm">
-                    <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
-                  </a>
-                  <a href="https://github.com/amrshaikh/phishshield-ai-webapp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-sm">
-                    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
 
-            
-<div class="bento-box project-card">
-  <img src="images/projects/mindfind-screenshot.png" alt="MindFind home" class="project-card-img" loading="lazy">
-  <div class="project-card-content">
-    <h3>MindFind</h3>
-    <p>A generative AI-powered wellness companion.</p>
-    <div class="project-card-tags">
-      <span class="tag">React</span>
-      <span class="tag">Vite</span>
-      <span class="tag">Pico.css</span>
-      <span class="tag">OpenStreetMap</span>
-      <span class="tag">Gemini API</span>
-    </div>
-    <div class="project-card-actions">
-      <a href="https://mindfind.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary-sm">
-        <span class="material-symbols-outlined icon-g">open_in_new</span>
-        <span>Live Demo</span>
-      </a>
-      <a href="https://github.com/amrshaikh/mind-find" target="_blank" rel="noopener noreferrer" class="btn-secondary-sm">
-        <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 24 5.67 18.63 0 12 .297z"></path>
-        </svg>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </div>
-</div>
+          <div class="project-card bento-box reveal">
+            <img src="images/projects/brainy-blitz-screenshot.png" alt="BrainyBlitz homepage screenshot"
+              class="project-card-img" loading="lazy">
+            <div class="project-card-content">
+              <h3>BrainyBlitz</h3>
+              <p>A web-based quiz game built with a dynamic question-fetching API.</p>
+              <div class="project-card-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">OpenTDB</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="https://amrshaikh.github.io/brainyblitz-quiz-app/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary-sm">
+                  <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
+                </a>
+                <a href="https://github.com/amrshaikh/brainyblitz-quiz-app" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary-sm">
+                  <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
 
- 
-<div class="bento-box project-card">
-  <img src="images/projects/shiksha-saathi-screenshot.png" alt="ShikshaSaathi homepage screenshot" class="project-card-img" loading="lazy">
-  <div class="project-card-content">
-    <h3>Shiksha Saathi</h3>
-    <p>A GenAI-powered teaching assistant chatbot for students.</p>
-    <div class="project-card-tags">
-      <span class="tag">HTML5</span>
-      <span class="tag">CSS3</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">OpenRouter API</span>
-    </div>
-    <div class="project-card-actions">
-      <a href="https://shiksha-saathi.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary-sm">
-        <span class="material-symbols-outlined icon-g">open_in_new</span>
-        <span>Live Demo</span>
-      </a>
-      <a href="https://github.com/amrshaikh/shiksha-saathi" target="_blank" rel="noopener noreferrer" class="btn-secondary-sm">
-        <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 24 5.67 18.63 0 12 .297z"></path>
-        </svg>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </div>
-</div>
+          <div class="project-card bento-box reveal">
+            <img src="images/projects/planet-pulse-screenshot.png" alt="PlanetPulse homepage screenshot"
+              class="project-card-img" loading="lazy">
+            <div class="project-card-content">
+              <h3>PlanetPulse</h3>
+              <p>An AI dashboard providing real-time city health checks.</p>
+              <div class="project-card-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Open-Meteo API</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="https://theplanetpulse.netlify.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary-sm">
+                  <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
+                </a>
+                <a href="https://github.com/amrshaikh/planet-pulse" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary-sm">
+                  <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card bento-box reveal">
+            <img src="images/projects/cuisine-quest-screenshot.png" alt="Cuisine Quest homepage screenshot"
+              class="project-card-img" loading="lazy">
+            <div class="project-card-content">
+              <h3>Cuisine Quest</h3>
+              <p>An interactive recipe platform designed for easy meal recommendation.</p>
+              <div class="project-card-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">TheMealDB API</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="https://amrshaikh.github.io/cuisine-quest/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary-sm">
+                  <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
+                </a>
+                <a href="https://github.com/amrshaikh/cuisine-quest" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary-sm">
+                  <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card bento-box reveal">
+            <img src="images/projects/phish-shield-screenshot.png" alt="PhishShield AI homepage screenshot"
+              class="project-card-img" loading="lazy">
+            <div class="project-card-content">
+              <h3>PhishShield AI</h3>
+              <p>An AI-powered web application for analyzing emails.</p>
+              <div class="project-card-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Gemini API</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="https://thefirewallcrew.netlify.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary-sm">
+                  <span class="material-symbols-outlined icon-g">open_in_new</span> Live Demo
+                </a>
+                <a href="https://github.com/amrshaikh/phishshield-ai-webapp" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary-sm">
+                  <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="bento-box project-card reveal">
+            <img src="images/projects/mindfind-screenshot.png" alt="MindFind home" class="project-card-img"
+              loading="lazy">
+            <div class="project-card-content">
+              <h3>MindFind</h3>
+              <p>A generative AI-powered wellness companion.</p>
+              <div class="project-card-tags">
+                <span class="tag">React</span>
+                <span class="tag">Vite</span>
+                <span class="tag">Pico.css</span>
+                <span class="tag">OpenStreetMap</span>
+                <span class="tag">Gemini API</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="https://mindfind.netlify.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn-primary-sm">
+                  <span class="material-symbols-outlined icon-g">open_in_new</span>
+                  <span>Live Demo</span>
+                </a>
+                <a href="https://github.com/amrshaikh/mind-find" target="_blank" rel="noopener noreferrer"
+                  class="btn-secondary-sm">
+                  <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 24 5.67 18.63 0 12 .297z">
+                    </path>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="bento-box project-card reveal">
+            <img src="images/projects/shiksha-saathi-screenshot.png" alt="ShikshaSaathi homepage screenshot"
+              class="project-card-img" loading="lazy">
+            <div class="project-card-content">
+              <h3>Shiksha Saathi</h3>
+              <p>A GenAI-powered teaching assistant chatbot for students.</p>
+              <div class="project-card-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">OpenRouter API</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="https://shiksha-saathi.netlify.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn-primary-sm">
+                  <span class="material-symbols-outlined icon-g">open_in_new</span>
+                  <span>Live Demo</span>
+                </a>
+                <a href="https://github.com/amrshaikh/shiksha-saathi" target="_blank" rel="noopener noreferrer"
+                  class="btn-secondary-sm">
+                  <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 24 5.67 18.63 0 12 .297z">
+                    </path>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-  <!-- 5. Page: Designs -->
-<section id="designs" class="page">
-  <div class="container page-content">
-    <h1 class="section-title">My Designs</h1>
-    
-    <!-- Filter Buttons -->
-    <div class="filter-group">
-      <button class="btn-filter design-filter-btn active" data-grid="design-grid-social">Social Media</button>
-      <button class="btn-filter design-filter-btn" data-grid="design-grid-anime">Anime</button>
-      <button class="btn-filter design-filter-btn" data-grid="design-grid-posters">Posters</button>
-      <button class="btn-filter design-filter-btn" data-grid="design-grid-web">Web Design</button>
-    </div>
+    <!-- 5. Page: Designs -->
+    <section id="designs" class="page">
+      <div class="container page-content">
+        <h1 class="section-title reveal">My Designs</h1>
 
-    <!-- Designs grids -->
-    <!-- Grid 1: Social Media (1:1 Ratio) - 9 items -->
-    <div id="design-grid-social" class="design-grid-container active">
-      <div class="design-grid">
-        <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-01.jpg">
-          <img src="images/designs/social-post-01.jpg" alt="Social Media Post 1" loading="lazy">
+        <!-- Filter Buttons -->
+        <div class="filter-group">
+          <button class="btn-filter design-filter-btn active" data-grid="design-grid-social">Social Media</button>
+          <button class="btn-filter design-filter-btn" data-grid="design-grid-anime">Anime</button>
+          <button class="btn-filter design-filter-btn" data-grid="design-grid-posters">Posters</button>
+          <button class="btn-filter design-filter-btn" data-grid="design-grid-web">Web Design</button>
         </div>
-        <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-02.jpg">
-          <img src="images/designs/social-post-02.jpg" alt="Social Media Post 2" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-03.jpg">
-          <img src="images/designs/social-post-03.jpg" alt="Social Media Post 3" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-04.jpg">
-          <img src="images/designs/social-post-04.jpg" alt="Social Media Post 4" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-05.jpg">
-          <img src="images/designs/social-post-05.jpg" alt="Social Media Post 5" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-06.jpg">
-          <img src="images/designs/social-post-06.jpg" alt="Social Media Post 6" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-07.jpg">
-          <img src="images/designs/social-post-07.jpg" alt="Social Media Post 7" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-08.jpg">
-          <img src="images/designs/social-post-08.jpg" alt="Social Media Post 8" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-09.jpg">
-          <img src="images/designs/social-post-09.jpg" alt="Social Media Post 9" loading="lazy">
-        </div>
-      </div>
-    </div>
 
-    <!-- Grid 2: Anime (4:5 Ratio) - 6 items -->
-    <div id="design-grid-anime" class="design-grid-container">
-      <div class="design-grid">
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-01.jpg">
-          <img src="images/designs/anime-poster-01.jpg" alt="Anime Poster 1" loading="lazy">
+        <!-- Designs grids -->
+        <!-- Grid 1: Social Media (1:1 Ratio) - 9 items -->
+        <div id="design-grid-social" class="design-grid-container active">
+          <div class="design-grid">
+            <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-01.jpg">
+              <img src="images/designs/social-post-01.jpg" alt="Social Media Post 1" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-02.jpg">
+              <img src="images/designs/social-post-02.jpg" alt="Social Media Post 2" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-03.jpg">
+              <img src="images/designs/social-post-03.jpg" alt="Social Media Post 3" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-04.jpg">
+              <img src="images/designs/social-post-04.jpg" alt="Social Media Post 4" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-05.jpg">
+              <img src="images/designs/social-post-05.jpg" alt="Social Media Post 5" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-06.jpg">
+              <img src="images/designs/social-post-06.jpg" alt="Social Media Post 6" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-07.jpg">
+              <img src="images/designs/social-post-07.jpg" alt="Social Media Post 7" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-08.jpg">
+              <img src="images/designs/social-post-08.jpg" alt="Social Media Post 8" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-1x1" data-img="images/designs/social-post-09.jpg">
+              <img src="images/designs/social-post-09.jpg" alt="Social Media Post 9" loading="lazy">
+            </div>
+          </div>
         </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-02.jpg">
-          <img src="images/designs/anime-poster-02.jpg" alt="Anime Poster 2" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-03.jpg">
-          <img src="images/designs/anime-poster-03.jpg" alt="Anime Poster 3" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-04.jpg">
-          <img src="images/designs/anime-poster-04.jpg" alt="Anime Poster 4" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-05.jpg">
-          <img src="images/designs/anime-poster-05.jpg" alt="Anime Poster 5" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-06.jpg">
-          <img src="images/designs/anime-poster-06.jpg" alt="Anime Poster 6" loading="lazy">
-        </div>
-      </div>
-    </div>
-    
-    <!-- Grid 3: Posters (4:5 Ratio) - 6 items -->
-    <div id="design-grid-posters" class="design-grid-container">
-      <div class="design-grid">
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-01.jpg">
-          <img src="images/designs/poster-01.jpg" alt="Poster 1" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-02.jpg">
-          <img src="images/designs/poster-02.jpg" alt="Poster 2" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-03.jpg">
-          <img src="images/designs/poster-03.jpg" alt="Poster 3" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-04.jpg">
-          <img src="images/designs/poster-04.jpg" alt="Poster 4" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-05.jpg">
-          <img src="images/designs/poster-05.jpg" alt="Poster 5" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-06.jpg">
-          <img src="images/designs/poster-06.jpg" alt="Poster 6" loading="lazy">
-        </div>
-      </div>
-    </div>
 
-    <!-- Grid 4: Web Design (Landscape) - 6 items -->
-    <div id="design-grid-web" class="design-grid-container">
-      <div class="design-grid">
-        <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-01.png">
-          <img src="images/designs/web-design-01.png" alt="Web Design 1" loading="lazy">
+        <!-- Grid 2: Anime (4:5 Ratio) - 6 items -->
+        <div id="design-grid-anime" class="design-grid-container">
+          <div class="design-grid">
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-01.jpg">
+              <img src="images/designs/anime-poster-01.jpg" alt="Anime Poster 1" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-02.jpg">
+              <img src="images/designs/anime-poster-02.jpg" alt="Anime Poster 2" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-03.jpg">
+              <img src="images/designs/anime-poster-03.jpg" alt="Anime Poster 3" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-04.jpg">
+              <img src="images/designs/anime-poster-04.jpg" alt="Anime Poster 4" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-05.jpg">
+              <img src="images/designs/anime-poster-05.jpg" alt="Anime Poster 5" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/anime-poster-06.jpg">
+              <img src="images/designs/anime-poster-06.jpg" alt="Anime Poster 6" loading="lazy">
+            </div>
+          </div>
         </div>
-        <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-02.png">
-          <img src="images/designs/web-design-02.png" alt="Web Design 2" loading="lazy">
+
+        <!-- Grid 3: Posters (4:5 Ratio) - 6 items -->
+        <div id="design-grid-posters" class="design-grid-container">
+          <div class="design-grid">
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-01.jpg">
+              <img src="images/designs/poster-01.jpg" alt="Poster 1" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-02.jpg">
+              <img src="images/designs/poster-02.jpg" alt="Poster 2" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-03.jpg">
+              <img src="images/designs/poster-03.jpg" alt="Poster 3" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-04.jpg">
+              <img src="images/designs/poster-04.jpg" alt="Poster 4" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-05.jpg">
+              <img src="images/designs/poster-05.jpg" alt="Poster 5" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-4x5" data-img="images/designs/poster-06.jpg">
+              <img src="images/designs/poster-06.jpg" alt="Poster 6" loading="lazy">
+            </div>
+          </div>
         </div>
-        <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-03.png">
-          <img src="images/designs/web-design-03.png" alt="Web Design 3" loading="lazy">
+
+        <!-- Grid 4: Web Design (Landscape) - 6 items -->
+        <div id="design-grid-web" class="design-grid-container">
+          <div class="design-grid">
+            <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-01.png">
+              <img src="images/designs/web-design-01.png" alt="Web Design 1" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-02.png">
+              <img src="images/designs/web-design-02.png" alt="Web Design 2" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-03.png">
+              <img src="images/designs/web-design-03.png" alt="Web Design 3" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-04.png">
+              <img src="images/designs/web-design-04.png" alt="Web Design 4" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-05.png">
+              <img src="images/designs/web-design-05.png" alt="Web Design 5" loading="lazy">
+            </div>
+            <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-06.png">
+              <img src="images/designs/web-design-06.png" alt="Web Design 6" loading="lazy">
+            </div>
+          </div>
         </div>
-        <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-04.png">
-          <img src="images/designs/web-design-04.png" alt="Web Design 4" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-05.png">
-          <img src="images/designs/web-design-05.png" alt="Web Design 5" loading="lazy">
-        </div>
-        <div class="bento-box design-item design-item-16x9" data-img="images/designs/web-design-06.png">
-          <img src="images/designs/web-design-06.png" alt="Web Design 6" loading="lazy">
-        </div>
+
       </div>
-    </div>
-    
-  </div>
-</section>
+    </section>
 
 
 
@@ -605,10 +662,10 @@
     <!-- Section 4. Page: About -->
     <section id="about" class="page">
       <div class="container page-content-narrow">
-        <h1 class="section-title">About Me</h1>
-        
+        <h1 class="section-title reveal">About Me</h1>
+
         <!-- Bio Section -->
-        <div class="bento-box about-section">
+        <div class="bento-box about-section reveal">
           <h2>Hi, I'm Amr Shaikh.</h2>
           <p>
             I'm a Computer Science student and designer, passionate about building modern,
@@ -627,34 +684,34 @@
             My Experience
           </h2>
           <div class="timeline">
-            
-            <div class="timeline-item">
+
+            <div class="timeline-item reveal">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <h3>Frontend Developer</h3>
-                <p class="timeline-subheading">Online Hackathons</p>
-                <time>2025 - Present</time>
-                <p>Designed and developed user-centric interfaces for hackathon projects using HTML, CSS, and JavaScript.</p>
+                <h3>Website Manager</h3>
+                <p class="timeline-subheading">AnithUncommon</p>
+                <time>2026 - Present</time>
+                <p>Maintaining and improving the official platform to ensure a high-quality user experience.</p>
               </div>
             </div>
-            
-            <div class="timeline-item">
+
+            <div class="timeline-item reveal">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <h3>Freelance & Volunteer</h3>
-                <p class="timeline-subheading">Various Clients</p>
-                <time>2024 - Present</time>
-                <p>Delivered print-ready and digital assets to client specifications using Adobe Photoshop and Canva.</p>
+                <h3>Website Development Intern</h3>
+                <p class="timeline-subheading">Virtual Arts for Humanity (VAH)</p>
+                <time>2026 - Present</time>
+                <p>Building and refining the official website while leveraging AI to speed up the development process.</p>
               </div>
             </div>
-            
-            <div class="timeline-item">
+
+            <div class="timeline-item reveal">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <h3>Graphic Designer</h3>
-                <p class="timeline-subheading">Personal Projects</p>
-                <time>2023 - Present</time>
-                <p>Created visually appealing UI/UX mockups for conceptual web and mobile applications using Figma.</p>
+                <h3>Digital Media Intern</h3>
+                <p class="timeline-subheading">Art in Tanzania</p>
+                <time>2025</time>
+                <p>Created social media videos and graphics to support community and humanitarian projects.</p>
               </div>
             </div>
           </div>
@@ -729,8 +786,8 @@
     <!-- Section 5. Page: Contact -->
     <section id="contact" class="page">
       <div class="container page-content-narrow">
-        <h1 class="section-title">Say Hello</h1>
-        <p class="section-subtitle" style="margin-bottom: 3rem;">
+        <h1 class="section-title reveal">Say Hello</h1>
+        <p class="section-subtitle reveal delay-200" style="margin-bottom: 3rem;">
           I'm open to discussing new projects and opportunities.
           Feel free to send me a message or connect on social media.
         </p>
@@ -749,7 +806,8 @@
               </div>
               <div>
                 <label for="message">Message</label>
-                <textarea name="message" id="message" rows="4" required placeholder="Hi, I'd like to talk about..."></textarea>
+                <textarea name="message" id="message" rows="4" required
+                  placeholder="Hi, I'd like to talk about..."></textarea>
               </div>
               <div>
                 <button type="submit" class="btn btn-primary btn-full">
@@ -766,7 +824,8 @@
           <!-- Social Links -->
           <div class="social-links">
             <h2>Find me on</h2>
-            <a href="mailto:amrshaikh.dev@gmail.com" target="_blank" rel="noopener noreferrer" class="social-card bento-box">
+            <a href="mailto:amrshaikh.dev@gmail.com" target="_blank" rel="noopener noreferrer"
+              class="social-card bento-box">
               <span class="social-icon"><span class="material-symbols-outlined icon-g">mail</span></span>
               <div>
                 <p>Email</p>
@@ -776,7 +835,11 @@
             </a>
             <a href="https://x.com/amrxshk" target="_blank" rel="noopener noreferrer" class="social-card bento-box">
               <span class="social-icon">
-                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.543 7.104c.015.211.015.423.015.636c0 6.507-4.954 14.01-14.01 14.01v-.003A13.94 13.94 0 0 1 0 19.539a9.88 9.88 0 0 0 7.287-2.041a4.93 4.93 0 0 1-4.6-3.42a4.9 4.9 0 0 0 2.223-.084A4.926 4.926 0 0 1 .96 9.167v-.062a4.9 4.9 0 0 0 2.235.616A4.93 4.93 0 0 1 1.67 3.148a13.98 13.98 0 0 0 10.15 5.144a4.929 4.929 0 0 1 8.39-4.49a9.9 9.9 0 0 0 3.128-1.196a4.94 4.94 0 0 1-2.165 2.724A9.8 9.8 0 0 0 24 4.555a10 10 0 0 1-2.457 2.549" fill="currentColor"/></svg>
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M21.543 7.104c.015.211.015.423.015.636c0 6.507-4.954 14.01-14.01 14.01v-.003A13.94 13.94 0 0 1 0 19.539a9.88 9.88 0 0 0 7.287-2.041a4.93 4.93 0 0 1-4.6-3.42a4.9 4.9 0 0 0 2.223-.084A4.926 4.926 0 0 1 .96 9.167v-.062a4.9 4.9 0 0 0 2.235.616A4.93 4.93 0 0 1 1.67 3.148a13.98 13.98 0 0 0 10.15 5.144a4.929 4.929 0 0 1 8.39-4.49a9.9 9.9 0 0 0 3.128-1.196a4.94 4.94 0 0 1-2.165 2.724A9.8 9.8 0 0 0 24 4.555a10 10 0 0 1-2.457 2.549"
+                    fill="currentColor" />
+                </svg>
               </span>
               <div>
                 <p>Twitter</p>
@@ -784,9 +847,13 @@
               </div>
               <span class="material-symbols-outlined icon-g social-arrow">arrow_outward</span>
             </a>
-            <a href="https://github.com/amrshaikh" target="_blank" rel="noopener noreferrer" class="social-card bento-box">
+            <a href="https://github.com/amrshaikh" target="_blank" rel="noopener noreferrer"
+              class="social-card bento-box">
               <span class="social-icon">
-                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                </svg>
               </span>
               <div>
                 <p>GitHub</p>
@@ -803,45 +870,51 @@
   <!-- 3. Global Footer -->
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>&copy; 2025 Amr Shaikh.</p>
+      <p>&copy; 2026 Amr Shaikh.</p>
       <!-- Social Links -->
       <div class="footer-socials">
-        
+
         <!-- GitHub (Your new SVG) -->
         <a href="https://github.com/amrshaikh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
         </a>
-        
+
         <!-- Instagram (Your new SVG) -->
         <!--
         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.03.084c-1.277.06-2.149.264-2.91.563a5.9 5.9 0 0 0-2.124 1.388a5.9 5.9 0 0 0-1.38 2.127C.321 4.926.12 5.8.064 7.076s-.069 1.688-.063 4.947s.021 3.667.083 4.947c.061 1.277.264 2.149.563 2.911c.308.789.72 1.457 1.388 2.123a5.9 5.9 0 0 0 2.129 1.38c.763.295 1.636.496 2.913.552c1.278.056 1.689.069 4.947.063s3.668-.021 4.947-.082c1.28-.06 2.147-.265 2.91-.563a5.9 5.9 0 0 0 2.123-1.388a5.9 5.9 0 0 0 1.38-2.129c.295-.763.496-1.636.551-2.912c.056-1.28.07-1.69.063-4.948c-.006-3.258-.02-3.667-.081-4.947c-.06-1.28-.264-2.148-.564-2.911a5.9 5.9 0 0 0-1.387-2.123a5.9 5.9 0 0 0-2.128-1.38c-.764-.294-1.636-.496-2.914-.55C15.647.009 15.236-.006 11.977 0S8.31.021 7.03.084m.14 21.693c-1.17-.05-1.805-.245-2.228-.408a3.7 3.7 0 0 1-1.382-.895a3.7 3.7 0 0 1-.9-1.378c-.165-.423-.363-1.058-.417-2.228c-.06-1.264-.072-1.644-.08-4.848c-.006-3.204.006-3.583.061-4.848c.05-1.169.246-1.805.408-2.228c.216-.561.477-.96.895-1.382a3.7 3.7 0 0 1 1.379-.9c.423-.165 1.057-.361 2.227-.417c1.265-.06 1.644-.072 4.848-.08c3.203-.006 3.583.006 4.85.062c1.168.05 1.804.244 2.227.408c.56.216.96.475 1.382.895s.681.817.9 1.378c.165.422.362 1.056.417 2.227c.06 1.265.074 1.645.08 4.848c.005 3.203-.006 3.583-.061 4.848c-.051 1.17-.245 1.805-.408 2.23c-.216.56-.477.96-.896 1.38a3.7 3.7 0 0 1-1.378.9c-.422.165-1.058.362-2.226.418c-1.266.06-1.645.072-4.85.079s-3.582-.006-4.848-.06m9.783-16.192a1.44 1.44 0 1 0 1.437-1.442a1.44 1.44 0 0 0-1.437 1.442M5.839 12.012a6.161 6.161 0 1 0 12.323-.024a6.162 6.162 0 0 0-12.323.024M8 12.008A4 4 0 1 1 12.008 16A4 4 0 0 1 8 12.008"/></svg>
         </a>
         -->
-        
+
         <!-- Twitter (Your new SVG) -->
         <a href="https://x.com/amrxshk" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.543 7.104c.015.211.015.423.015.636c0 6.507-4.954 14.01-14.01 14.01v-.003A13.94 13.94 0 0 1 0 19.539a9.88 9.88 0 0 0 7.287-2.041a4.93 4.93 0 0 1-4.6-3.42a4.9 4.9 0 0 0 2.223-.084A4.926 4.926 0 0 1 .96 9.167v-.062a4.9 4.9 0 0 0 2.235.616A4.93 4.93 0 0 1 1.67 3.148a13.98 13.98 0 0 0 10.15 5.144a4.929 4.929 0 0 1 8.39-4.49a9.9 9.9 0 0 0 3.128-1.196a4.94 4.94 0 0 1-2.165 2.724A9.8 9.8 0 0 0 24 4.555a10 10 0 0 1-2.457 2.549"/></svg>
+          <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M21.543 7.104c.015.211.015.423.015.636c0 6.507-4.954 14.01-14.01 14.01v-.003A13.94 13.94 0 0 1 0 19.539a9.88 9.88 0 0 0 7.287-2.041a4.93 4.93 0 0 1-4.6-3.42a4.9 4.9 0 0 0 2.223-.084A4.926 4.926 0 0 1 .96 9.167v-.062a4.9 4.9 0 0 0 2.235.616A4.93 4.93 0 0 1 1.67 3.148a13.98 13.98 0 0 0 10.15 5.144a4.929 4.929 0 0 1 8.39-4.49a9.9 9.9 0 0 0 3.128-1.196a4.94 4.94 0 0 1-2.165 2.724A9.8 9.8 0 0 0 24 4.555a10 10 0 0 1-2.457 2.549" />
+          </svg>
         </a>
       </div>
     </div>
   </footer>
 
   <!-- Design Modal (UPDATED - Image only) -->
-<div id="design-modal" class="modal-overlay hidden-item">
-  <div class="modal-content">
-    <div class="modal-image-container">
-      <img id="modal-img" src="" alt="Enlarged design view">
-      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">
-        <span class="material-symbols-outlined icon-g">close</span>
-      </button>
+  <div id="design-modal" class="modal-overlay hidden-item">
+    <div class="modal-content">
+      <div class="modal-image-container">
+        <img id="modal-img" src="" alt="Enlarged design view">
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">
+          <span class="material-symbols-outlined icon-g">close</span>
+        </button>
+      </div>
     </div>
   </div>
-</div>
 
   <!-- 5. JavaScript Files -->
   <script src="script.js"></script>
-  
-</body>
-</html>
 
+</body>
+
+</html>

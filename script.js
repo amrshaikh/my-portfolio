@@ -341,6 +341,27 @@ function initializeApp() {
   // END: Home Page Design Carousel
   // ==========================================================
 
+  // ==========================================================
+  // START: Scroll Reveal Animations
+  // ==========================================================
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Unobserve to run the animation only once
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+  // ==========================================================
+  // END: Scroll Reveal Animations
+  // ==========================================================
 
 } // <-- This is the FINAL closing brace of initializeApp()
 
